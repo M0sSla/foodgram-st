@@ -2,7 +2,7 @@ from rest_framework import serializers
 from djoser.serializers import UserCreateSerializer, UserSerializer
 from drf_extra_fields.fields import Base64ImageField
 
-from recipes.constants import AMOUNT_MIN_VALUE, AMOUNT_MIN_VALUE_ERROR_MESSAGE
+from recipes.constants import AMOUNT_MIN_VALUE, MIN_VALUE_AMOUNT_ERROR_MESSAGE
 from recipes.models import Ingredient, Recipe, RecipeIngredients
 from users.models import User
 from .constants import RECIPES_LIMIT_QUERY_PARAM
@@ -137,7 +137,7 @@ class RecipeIngredientsSerializer(serializers.ModelSerializer):
             'amount': {
                 'min_value': AMOUNT_MIN_VALUE,
                 'error_messages': {
-                    'min_value': AMOUNT_MIN_VALUE_ERROR_MESSAGE
+                    'min_value': MIN_VALUE_AMOUNT_ERROR_MESSAGE
                 }
             }
         }
@@ -157,7 +157,7 @@ class CreateUpdateRecipeIngredientsSerializer(serializers.ModelSerializer):
             'amount': {
                 'min_value': AMOUNT_MIN_VALUE,
                 'error_messages': {
-                    'min_value': AMOUNT_MIN_VALUE_ERROR_MESSAGE
+                    'min_value': MIN_VALUE_AMOUNT_ERROR_MESSAGE
                 }
             }
         }

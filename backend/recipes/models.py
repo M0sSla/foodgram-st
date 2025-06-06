@@ -4,7 +4,7 @@ from django.db import models
 from users.models import User
 from .constants import (
     AMOUNT_MIN_VALUE,
-    AMOUNT_MIN_VALUE_ERROR_MESSAGE,
+    MIN_VALUE_AMOUNT_ERROR_MESSAGE,
     COOKING_TIME_MIN_VALUE,
     COOKING_TIME_MIN_VALUE_ERROR_MESSAGE,
     MAX_FIELD_LENGTH,
@@ -120,7 +120,7 @@ class RecipeIngredients(models.Model):
         validators=(
             MinValueValidator(
                 AMOUNT_MIN_VALUE,
-                AMOUNT_MIN_VALUE_ERROR_MESSAGE
+                MIN_VALUE_AMOUNT_ERROR_MESSAGE
             ),
         ),
         verbose_name="Количество",

@@ -8,6 +8,6 @@ COOKING_TIME_MIN_VALUE = 1
 COOKING_TIME_MIN_VALUE_ERROR_MESSAGE = (
     "Время приготовления не может быть меньше 1"
 )
-AMOUNT_MIN_VALUE_ERROR_MESSAGE = "Не может быть меньше 1"
+MIN_VALUE_AMOUNT_ERROR_MESSAGE = "Не может быть меньше 1"
 
 RECIPE_IMAGE_UPLOAD_TO = "recipes/"
